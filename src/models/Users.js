@@ -13,27 +13,22 @@ let UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    vault: {
+    // El token que se le pasa al cliente va a tener la forma {ID}:{HASH} donde ID es la ID del usuario
+    // y HASH es una cadena aleatoria de caracteres hexadecimales que guardamos en auth_token, junto con su fecha de expiracion
+    auth_token: {
+      value: {
         type: String,
-        required: true
+        default: null
+      },
+      expiry_date: {
+        type: Date,
+        default: null
+      }
+    },
+    vault_id: {
+      type: String,
+      default: null
     }
 });
-
-/*
-Vault schema
-
-{
-    version: 1
-    data: {
-        passwords: [
-            {
-                name: Encrypted String
-                user: Encrypted String
-                password: Encrypted String
-            }
-        ]
-    }
-}
-*/
 
 module.exports = mongoose.model('User', UserSchema);
