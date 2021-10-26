@@ -29,10 +29,6 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/vaults', vaultsRoutes);
 
-app.get('/', (req, res) => {
-	res.send('Hola mundo').end();
-})
-
 app.listen(process.env.PORT, () => {
 	console.log(`Server listening on port ${process.env.PORT}`);
 });

@@ -16,7 +16,7 @@ let VaultSchema = mongoose.Schema({
     name: Hash,
     user: Hash,
     password: Hash,
-		color: String
+	color: String
   }
 */
 
