@@ -71,6 +71,7 @@ const login = async (req, res) => {
         }
     }
 	if (err) {
+		//TODO: agregar delay en caso de error
 		res.send({ status: 'failure', data: err }).end();
 		return;
 	}

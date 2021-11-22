@@ -1,5 +1,5 @@
 #!/bin/bash
-HOST=passwd.zaifo.com.ar
+HOST=bolsa.zaifo.com.ar
 FOLDER="~/server/gpass/node/src"
 SERVICE_NAME="gpass_node"
 ssh root@$HOST rm -rf $FOLDER/*
