@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require('cors');
-const dotenv = require('dotenv').config({path: './src/.env'});
+const dotenv = require('dotenv').config();
 const db = require('./config/database.js');
 const authRoutes = require('./routes/auth');
 const vaultsRoutes = require('./routes/vaults');
@@ -19,7 +19,7 @@ app.use(cors({
 		}
 		return callback(null, true);
 	},
-	methods: ['GET', 'POST', 'PATCH'],
+	methods: ['GET', 'POST'],
 	credentials: true
 }));
 
