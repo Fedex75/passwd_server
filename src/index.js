@@ -8,7 +8,11 @@ const app = express();
 
 //Middlewares
 
-app.use(cors());
+const corsConfig = {
+	credentials: true,
+	origin: true,
+};
+app.use(cors(corsConfig));
 
 app.use(express.json());
 
