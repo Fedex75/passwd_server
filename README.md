@@ -8,8 +8,6 @@ npm i
 npm run start
 ```
 # Configuracion
-Especificar en el archivo .env:
-- PORT
-- MONGO_URI
-
-(opcional; los valores por defecto funcionan correctamente)
+Opcionalmente se puede especificar en el archivo .env:
+- PORT       (puerto para el servidor HTTP)
+- MONGO_URI  (URI de conexión a la base de datos)
